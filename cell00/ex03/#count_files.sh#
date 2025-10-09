@@ -1,0 +1,2 @@
+case 
+ls -1 | wc -l 

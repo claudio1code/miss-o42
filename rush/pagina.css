@@ -1,0 +1,19 @@
+body{height: 100vh;width: 100vw;margin: 0;}
+.menu{
+    position: fixed;
+    width: 100vw;
+
+}
+table{
+    background-color: darkcyan;
+}
+th{
+    width: 33%;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+stilo.css
+Exibindo author.txt.

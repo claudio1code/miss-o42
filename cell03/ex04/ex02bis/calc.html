@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <h1>Calculadora</h1>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="calculadora"></form>
+    <input type="number" id="esquerdo">
+    <select name="" id="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="direito">
+    <input type="submit" value="Try Me" id="TryMe">
+    
+    <script>
+        $(document).ready(function() {
+            $("#TryMe").click(function() {
+                // Pegando os valores dos inputs
+                let number1 = parseFloat($("#esquerdo").val());
+                let number2 = parseFloat($("#direito").val());
+                let operador = $("#operador").val();
+                let result;
+
+                // Verificando se os valores são válidos
+                if (isNaN(number1) || isNaN(number2)) {
+                    alert("Erro! Por favor, insira valores válidos.");
+                    return;
+                }
+
+                // Realizando a operação matemática conforme o operador
+                switch (operador) {
+                    case "+":
+                        result = number1 + number2;
+                        break;
+                    case "-":
+                        result = number1 - number2;
+                        break;
+                    case "*":
+                        result = number1 * number2;
+                        break;
+                    case "/":
+                        if (number2 === 0) {
+                            alert("Erro: Não é possível dividir por zero!");
+                            console.error("Divisão por zero!");
+                            return;
+                        }
+                        result = number1 / number2;
+                        break;
+                    case "%":
+                        if (number2 === 0) {
+                            alert("Erro: Não é possível calcular o módulo por zero!");
+                            console.error("Módulo por zero!");
+                            return;
+                        }
+                        result = number1 % number2;
+                        break;
+                    default:
+                        break;
+                }
+
+                // Exibindo o resultado
+                if (result !== undefined) {
+                    alert(result);
+                    console.log(result);
+                }
+            });
+
+            // Exibindo o aviso a cada 30 segundos
+            setInterval(() => {
+                alert("Please, use me...");
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

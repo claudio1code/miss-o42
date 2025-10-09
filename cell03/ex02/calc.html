@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <h1>Calculadora</h1>
+</head>
+<body>
+    <form id="calculadora"></form>
+    <input type="number" id="esquerdo">
+    <select name="" id="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="direito">
+    <input type="submit" value="Try Me" id="TryMe">
+    
+    <script>
+        const calculadora = document.getElementById("calculadora");
+        const esquerdo = document.getElementById("esquerdo");
+        const direito = document.getElementById("direito");
+        const operador = document.getElementById("operador");
+        const tentar = document.getElementById("TryMe");
+
+        tentar.addEventListener("click", function () {
+            let number1 = parseFloat(esquerdo.value);
+            let number2 = parseFloat(direito.value);
+            let equa = operador.value;
+            let result;
+
+            if (!Number.isInteger(number1) || !Number.isInteger(number2)) {
+                alert("error");
+                return;
+            }
+
+            switch (equa) {
+                case "+":
+                    result = number1 + number2;
+                    break;
+                case "-":
+                    result = number1 - number2;
+                    break;
+                case "*":
+                    result = number1 * number2;
+                    break;
+                case "/":
+                    if (number2 === 0) {
+                        alert("It's over 9000");
+                        console.error("Divisão por zero!");
+                        return;
+                    }
+                    result = number1 / number2;
+                    break;
+                case "%":
+                    if (number2 === 0) {
+                        alert("It's over 9000");
+                        console.error("Módulo por zero!");
+                        return;
+                    }
+                    result = number1 % number2;
+                    break;
+                default:
+                    break;
+            }
+
+            if (result !== undefined) {
+                alert(result);
+                console.log(result);
+            }
+        });
+
+        setInterval(() => {
+            alert("Please, use me...")
+        }, 30000);
+    </script>
+</body>
+</html>

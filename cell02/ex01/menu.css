@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    padding-top: 20vh;
+    border-radius: 50px;
+    
+}
+.botao{
+    font-size: 100px;
+    border-radius: 25% 10%;
+    background-color: rgb(255, 177, 172); 
+}
+.card-ingredientes{
+    font-size: 30px;
+    justify-content: center;
+    display: none;
+    
+}
+.botao:hover {
+    background-color: rgb(120, 182, 253); 
+    border-radius: 10% 26% 5%;
+        
+} 
+.container:hover .card-ingredientes{
+    display: block;
+}

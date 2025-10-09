@@ -1,0 +1,16 @@
+table{
+    border-style: solid black; width: 100vw; height:100vh;
+}
+body{
+    margin: 0%;
+}
+th{
+    width: 50%;
+    
+}
+.coluna1{
+    background-color: blue
+}
+.coluna2{
+    background-color: aquamarine
+}

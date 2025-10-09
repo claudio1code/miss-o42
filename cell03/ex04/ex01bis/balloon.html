@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #balao {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="balao"></div>
+
+    <script>
+        $(document).ready(function() {
+            let tamanho = 200;
+            let corAtual = 0;
+            const cores = ["red", "green", "blue"];
+
+            // Evento de clique no balão
+            $("#balao").click(function() {
+                tamanho += 10;
+                if (tamanho > 420) {
+                    tamanho = 200;
+                    console.log(tamanho);
+                }
+                $(this).css({
+                    width: tamanho + "px",
+                    height: tamanho + "px",
+                    backgroundColor: cores[corAtual]
+                });
+
+                corAtual = (corAtual + 1) % cores.length;
+                console.log("corAtual Listener: " + corAtual);
+            });
+
+            // Função para diminuir o balão
+            function diminuir() {
+                if (tamanho > 200) {
+                    tamanho -= 5;
+                    $("#balao").css({
+                        width: tamanho + "px",
+                        height: tamanho + "px",
+                        backgroundColor: cores[corAtual]
+                    });
+
+                    corAtual = (corAtual - 1 + cores.length) % cores.length;
+                    console.log("corAtual diminuir: " + corAtual);
+                }
+            }
+
+            // Evento de mouseleave
+            $("#balao").mouseleave(function() {
+                diminuir();
+            });
+        });
+    </script>
+</body>
+</html>

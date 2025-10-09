@@ -1,0 +1,16 @@
+button{
+    font-size: 90px;
+    background-color: rgb(26, 51, 97);
+    color: yellow;
+    border-radius: 18px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    text-align: center;
+    
+}
+body{
+    background-color: aliceblue;
+   
+}

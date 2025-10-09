@@ -1,0 +1,63 @@
+*{
+    padding: 0%;
+    margin: 0%;
+   
+}
+
+.titulo{
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    text-align: center;
+    width: 300px;
+}
+table{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+.imagemPerfil{
+    display: grid;
+    justify-content: center; 
+}
+.login{
+    display: grid;
+    justify-content: center;
+    height: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.txt1{
+    display: grid;
+    justify-content: center;
+    height: 40px;
+}
+.escola{
+    display: grid;
+    justify-content: center;
+    height: 25px;
+    font-size: 38px;
+}
+
+button {
+    width: 100%;
+}
+.img03{
+    max-width: 2px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        #balao {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="balao"></div>
+    <script>
+        const balao = document.getElementById("balao");
+        let tamanho = 200;
+        let corAtual = 0;
+        
+        const cores = ["red", "green", "blue"]
+        
+        balao.addEventListener("click", () => {
+            tamanho += 10;
+            if (tamanho > 420) {
+                tamanho = 200;
+                console.log(tamanho);
+            }
+            balao.style.width = tamanho + "px";
+            balao.style.height = tamanho + "px";
+            console.log(tamanho);
+            corAtual = (corAtual + 1) % cores.length;
+            console.log("corAtual Listener: "+corAtual)
+            balao.style.backgroundColor = cores[corAtual];
+            
+        });
+
+function diminuir(){
+    if(tamanho > 200){
+        tamanho -= 5
+
+        balao.style.width = tamanho + 'px'
+        balao.style.height = tamanho + 'px'
+        corAtual = (corAtual - 1 + cores.length) % cores.length;
+        console.log("corAtual diminuir: " + corAtual)
+        balao.style.backgroundColor = cores[corAtual];
+   }
+    }
+    balao.addEventListener("mouseleave", (event) => {
+        diminuir()
+    }) 
+    </script>
+
+    
+</body>
+</html>

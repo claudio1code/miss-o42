@@ -1,0 +1,41 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.img02{
+    max-width: 50px;
+    max-height: 50px;
+}
+.img00{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width: 100%;
+    color: aliceblue;
+    background-color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:italic;
+}
+.titulo{
+    font-size: 38px;
+}
+table{
+    box-shadow: -4px 3px 10px #000000 ;
+}
+.perfil{
+    border-radius: 15%;
+}
+.login{
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.escola{
+    font-size: 28px;
+}
+.level{
+    font-family: monospace;
+}
